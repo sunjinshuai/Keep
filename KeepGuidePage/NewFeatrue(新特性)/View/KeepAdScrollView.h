@@ -11,5 +11,6 @@
 @interface KeepAdScrollView : UIScrollView
 
 @property (nonatomic, strong) NSArray *titles;
+@property (nonatomic, strong) UIPageControl *pageControl;
 
 @end

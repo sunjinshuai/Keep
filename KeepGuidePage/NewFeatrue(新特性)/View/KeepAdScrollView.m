@@ -26,10 +26,51 @@
     return self;
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat scrollW = self.bounds.size.width;
+    int page = (scrollView.contentOffset.x + scrollW * 0.5) / scrollW;
+    page --;
+    self.pageControl.currentPage = page;
+    
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self removeTimer];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self addTimer];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    [self scrollViewDidStop:scrollView];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    [self scrollViewDidStop:scrollView];
+}
+
+
+- (void)scrollViewDidStop:(UIScrollView *)scrollView
+{
+    CGFloat scrollW = [UIScreen mainScreen].bounds.size.width;
+    int page = (self.contentOffset.x + 0.5 * scrollW) / scrollW;
+    if (page == 0){
+        [self setContentOffset:CGPointMake(scrollW * self.titles.count, 0)];
+    } else if (page == (self.titles.count + 1)) {
+        [self setContentOffset:CGPointMake(scrollW , 0)];
+    }
+}
+
+#pragma mark - Private method
 - (void)setTitles:(NSArray *)titles
 {
     _titles = titles;
-    
+    self.pageControl.numberOfPages = self.titles.count;
     [self setbanner];
 }
 
@@ -75,28 +116,44 @@
     
     self.pagingEnabled = YES;
     
+    self.pageControl.currentPage = 0;
+    
     [self setContentOffset:CGPointMake(W, 0)];
+    
+    [self addTimer];
 }
 
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+- (void)addTimer
 {
-    [self scrollViewDidStop:scrollView];
+    self.timer = [NSTimer timerWithTimeInterval:3.0f target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+    
+    [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+- (void)nextImage
 {
-    [self scrollViewDidStop:scrollView];
-}
-
-- (void)scrollViewDidStop:(UIScrollView *)scrollView
-{
-    CGFloat scrollW = [UIScreen mainScreen].bounds.size.width;
-    int page = (self.contentOffset.x + 0.5 * scrollW) / scrollW;
-    if (page == 0){
-        [self setContentOffset:CGPointMake(scrollW * self.titles.count, 0)];
-    } else if (page == (self.titles.count + 1)) {
-        [self setContentOffset:CGPointMake(scrollW , 0)];
+    NSInteger page = 0;
+    if (self.pageControl.currentPage == self.titles.count) {
+        page = 0;
+    } else {
+        page = self.pageControl.currentPage + 1;
     }
+    CGFloat offsetX = (page + 1) * self.bounds.size.width;
+    CGPoint offset = CGPointMake(offsetX, 0);
+    
+    [self setContentOffset:offset animated:YES];
+    
+}
+
+- (void)removeTimer
+{
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
+- (void)dealloc
+{
+    [self removeTimer];
 }
 
 

@@ -16,7 +16,6 @@
 @property (nonatomic, strong) UIButton *loginButton;
 @property (nonatomic, strong) KeepAdScrollView *adScrollView;
 @property (nonatomic, strong) UIPageControl *pageControl;
-@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -37,22 +36,8 @@
         self.adScrollView.titles = @[@"全程记录你的健身数据",@"规范你的训练过程",@"陪伴你迈出跑步的第一步",@"分享汗水后你的性感"];
    
         self.pageControl.numberOfPages = self.adScrollView.titles.count;
-        
-        self.timer = [NSTimer timerWithTimeInterval:3.0f target:self selector:@selector(timerChanged) userInfo:nil repeats:YES];
-        
-        [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
     return self;
-}
-
-- (void)timerChanged
-{
-    int page = (self.pageControl.currentPage + 1) % 4;
-    self.pageControl.currentPage = page;
-    CGFloat offsetX = (page + 1) * self.bounds.size.width;
-    CGPoint offset = CGPointMake(offsetX, 0);
-    
-    [self.adScrollView setContentOffset:offset animated:YES];
 }
 
 #pragma mark - setter and getter
@@ -114,6 +99,7 @@
     if (!_adScrollView) {
         _adScrollView = [[KeepAdScrollView alloc] init];
         _adScrollView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 105);
+        _adScrollView.pageControl = self.pageControl;
     }
     return _adScrollView;
 }
