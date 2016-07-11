@@ -40,6 +40,16 @@
     return self;
 }
 
+- (void)registerClick
+{
+
+}
+
+- (void)login
+{
+
+}
+
 #pragma mark - setter and getter
 - (UIImageView *)imageView
 {
@@ -67,7 +77,7 @@
         [_registerButton setTitle:@"注册" forState:UIControlStateNormal];
         [_registerButton setBackgroundColor:[UIColor blackColor]];
         _registerButton.titleLabel.font = [UIFont systemFontOfSize:18];
-        
+        [_registerButton addTarget:self action:@selector(registerClick) forControlEvents:UIControlEventTouchUpInside];
         _registerButton.layer.cornerRadius = 3.0f;
         _registerButton.alpha = 0.4f;
     }
@@ -87,6 +97,7 @@
         [_loginButton setTitle:@"登录" forState:UIControlStateNormal];
         [_loginButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_loginButton setBackgroundColor:[UIColor whiteColor]];
+        [_loginButton addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
         _loginButton.titleLabel.font = [UIFont systemFontOfSize:18];
         _loginButton.layer.cornerRadius = 3.0f;
         _loginButton.alpha = 0.4f;
