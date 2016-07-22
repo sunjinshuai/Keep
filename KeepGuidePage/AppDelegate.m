@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "KeepTabBarViewController.h"
+#import "KeepNewFeatureViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +19,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    // 创建窗口
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.backgroundColor = [UIColor blackColor];
+    [self.window makeKeyAndVisible];
+    if ([[NSBundle mainBundle].infoDictionary[@"CFBundleVersion"] isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:@"CFBundleVersion"]]) {
+        self.window.rootViewController = [[KeepTabBarViewController alloc] init];
+    } else {
+        KeepNewFeatureViewController *feature = [[KeepNewFeatureViewController alloc] init];
+        self.window.rootViewController = feature;
+    }
     [self setup3DTouch];
     return YES;
 }

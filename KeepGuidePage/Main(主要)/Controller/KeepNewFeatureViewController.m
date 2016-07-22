@@ -1,34 +1,34 @@
 //
-//  ViewController.m
+//  KeepNewFeatureViewController.m
 //  KeepGuidePage
 //
-//  Created by Michael on 16/6/30.
+//  Created by Michael on 16/7/22.
 //  Copyright © 2016年 com.51fanxing.KeepGuidePage. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "KeepNewFeatureViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "KeepNewFeatrueView.h"
 
-@interface ViewController ()
+@interface KeepNewFeatureViewController ()
 
 @property (nonatomic, strong) MPMoviePlayerController *moviePlayerController;
 @property (nonatomic, strong) KeepNewFeatrueView *keepView;
 
 @end
 
-@implementation ViewController
+@implementation KeepNewFeatureViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"keep" ofType:@"mp4"];
-
+    
     self.moviePlayerController.contentURL = [[NSURL alloc] initFileURLWithPath:moviePath];
-
+    
     [self.moviePlayerController play];
-
+    
     [self.moviePlayerController.view bringSubviewToFront:self.keepView];
 }
 

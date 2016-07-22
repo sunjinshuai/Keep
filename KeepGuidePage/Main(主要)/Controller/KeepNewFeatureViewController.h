@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  KeepNewFeatureViewController.h
 //  KeepGuidePage
 //
-//  Created by Michael on 16/6/30.
+//  Created by Michael on 16/7/22.
 //  Copyright © 2016年 com.51fanxing.KeepGuidePage. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface KeepNewFeatureViewController : UIViewController
 
 @end
-
