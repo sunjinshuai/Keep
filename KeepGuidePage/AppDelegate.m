@@ -28,7 +28,8 @@
         self.window.rootViewController = [[KeepTabBarViewController alloc] init];
     } else {
         KeepNewFeatureViewController *feature = [[KeepNewFeatureViewController alloc] init];
-        self.window.rootViewController = feature;
+        UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:feature];
+        self.window.rootViewController = navigation;
     }
     [self setup3DTouch];
     return YES;

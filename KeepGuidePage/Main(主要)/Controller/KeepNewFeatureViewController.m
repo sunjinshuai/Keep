@@ -9,8 +9,10 @@
 #import "KeepNewFeatureViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "KeepNewFeatrueView.h"
+#import "LoginViewController.h"
+#import "RegisterViewController.h"
 
-@interface KeepNewFeatureViewController ()
+@interface KeepNewFeatureViewController ()<KeepNewFeatrueViewDelegate>
 
 @property (nonatomic, strong) MPMoviePlayerController *moviePlayerController;
 @property (nonatomic, strong) KeepNewFeatrueView *keepView;
@@ -41,6 +43,19 @@
     }
 }
 
+#pragma mark - KeepNewFeatrueViewDelegate
+// 登录
+- (void)keepNewFeatrueView:(nullable KeepNewFeatrueView *)keepNewFeatrueView didLogin:(nullable UIButton *)loginButton
+{
+    LoginViewController *login = [[LoginViewController alloc] init];
+    [self.navigationController pushViewController:login animated:YES];
+}
+// 注册
+- (void)keepNewFeatrueView:(nullable KeepNewFeatrueView *)keepNewFeatrueView didRegister:(nullable UIButton *)registerButton
+{
+    RegisterViewController *registerController = [[RegisterViewController alloc] init];
+    [self.navigationController pushViewController:registerController animated:YES];
+}
 
 #pragma mark - setter and getter
 - (MPMoviePlayerController *)moviePlayerController
@@ -69,6 +84,7 @@
 {
     if (!_keepView) {
         _keepView = [[KeepNewFeatrueView alloc] init];
+        _keepView.delegate = self;
         _keepView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
         [self.moviePlayerController.view addSubview:_keepView];
     }

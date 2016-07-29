@@ -14,6 +14,8 @@
 		4CCB2DF31D427715007BAE45 /* KeepFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB2DF21D427715007BAE45 /* KeepFindViewController.m */; };
 		4CCB2DF61D427724007BAE45 /* KeepFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB2DF51D427724007BAE45 /* KeepFollowViewController.m */; };
 		4CCB2DF91D427736007BAE45 /* KeepPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB2DF81D427736007BAE45 /* KeepPersonalViewController.m */; };
+		4CE9CDDF1D4B506E00132928 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9CDDE1D4B506E00132928 /* LoginViewController.m */; };
+		4CE9CDE21D4B508E00132928 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9CDE11D4B508E00132928 /* RegisterViewController.m */; };
 		4CFC68081D25082E00BD60F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC68071D25082E00BD60F8 /* main.m */; };
 		4CFC680B1D25082E00BD60F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC680A1D25082E00BD60F8 /* AppDelegate.m */; };
 		4CFC68161D25082E00BD60F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CFC68141D25082E00BD60F8 /* LaunchScreen.storyboard */; };
@@ -58,6 +60,10 @@
 		4CCB2DF51D427724007BAE45 /* KeepFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeepFollowViewController.m; sourceTree = "<group>"; };
 		4CCB2DF71D427736007BAE45 /* KeepPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeepPersonalViewController.h; sourceTree = "<group>"; };
 		4CCB2DF81D427736007BAE45 /* KeepPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeepPersonalViewController.m; sourceTree = "<group>"; };
+		4CE9CDDD1D4B506E00132928 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4CE9CDDE1D4B506E00132928 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4CE9CDE01D4B508E00132928 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		4CE9CDE11D4B508E00132928 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		4CFC68031D25082E00BD60F8 /* KeepGuidePage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepGuidePage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFC68071D25082E00BD60F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CFC68091D25082E00BD60F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -264,6 +270,41 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4CE9CDD91D4B503C00132928 /* Account(账号) */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9CDDA1D4B503C00132928 /* Controller */,
+				4CE9CDDB1D4B503C00132928 /* Model */,
+				4CE9CDDC1D4B503C00132928 /* View */,
+			);
+			path = "Account(账号)";
+			sourceTree = "<group>";
+		};
+		4CE9CDDA1D4B503C00132928 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9CDDD1D4B506E00132928 /* LoginViewController.h */,
+				4CE9CDDE1D4B506E00132928 /* LoginViewController.m */,
+				4CE9CDE01D4B508E00132928 /* RegisterViewController.h */,
+				4CE9CDE11D4B508E00132928 /* RegisterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4CE9CDDB1D4B503C00132928 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CE9CDDC1D4B503C00132928 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4CFC67FA1D25082E00BD60F8 = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +328,7 @@
 		4CFC68051D25082E00BD60F8 /* KeepGuidePage */ = {
 			isa = PBXGroup;
 			children = (
+				4CE9CDD91D4B503C00132928 /* Account(账号) */,
 				4CCB2DE71D427353007BAE45 /* Train(训练) */,
 				4CCB2DE31D42734D007BAE45 /* Find(发现) */,
 				4CCB2DDF1D427346007BAE45 /* Follow(关注) */,
@@ -493,6 +535,7 @@
 			files = (
 				4CCB2DF01D427705007BAE45 /* KeepTrainViewController.m in Sources */,
 				4CFC68481D251C9E00BD60F8 /* KeepNewFeatrueView.m in Sources */,
+				4CE9CDDF1D4B506E00132928 /* LoginViewController.m in Sources */,
 				4CFC684E1D252B0C00BD60F8 /* KeepAdLabel.m in Sources */,
 				4CCB2DDA1D427188007BAE45 /* KeepNewFeatureViewController.m in Sources */,
 				4CCB2DF31D427715007BAE45 /* KeepFindViewController.m in Sources */,
@@ -501,6 +544,7 @@
 				4CCB2DF91D427736007BAE45 /* KeepPersonalViewController.m in Sources */,
 				4CCB2DED1D427676007BAE45 /* KeepNavigationViewController.m in Sources */,
 				4CFC68081D25082E00BD60F8 /* main.m in Sources */,
+				4CE9CDE21D4B508E00132928 /* RegisterViewController.m in Sources */,
 				4CCB2DD71D42714E007BAE45 /* KeepTabBarViewController.m in Sources */,
 				4CCB2DF61D427724007BAE45 /* KeepFollowViewController.m in Sources */,
 			);
