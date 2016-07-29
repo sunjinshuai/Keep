@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "KeepTabBarViewController.h"
 #import "KeepNewFeatureViewController.h"
+#import "KeepNavigationViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,7 +29,7 @@
         self.window.rootViewController = [[KeepTabBarViewController alloc] init];
     } else {
         KeepNewFeatureViewController *feature = [[KeepNewFeatureViewController alloc] init];
-        UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:feature];
+        KeepNavigationViewController *navigation = [[KeepNavigationViewController alloc] initWithRootViewController:feature];
         self.window.rootViewController = navigation;
     }
     [self setup3DTouch];

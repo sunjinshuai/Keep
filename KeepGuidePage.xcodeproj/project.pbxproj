@@ -16,6 +16,10 @@
 		4CCB2DF91D427736007BAE45 /* KeepPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB2DF81D427736007BAE45 /* KeepPersonalViewController.m */; };
 		4CE9CDDF1D4B506E00132928 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9CDDE1D4B506E00132928 /* LoginViewController.m */; };
 		4CE9CDE21D4B508E00132928 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9CDE11D4B508E00132928 /* RegisterViewController.m */; };
+		4CE9CDE71D4B5E6200132928 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9CDE61D4B5E6200132928 /* UIBarButtonItem+Extension.m */; };
+		4CE9CDEA1D4B5E7800132928 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9CDE91D4B5E7800132928 /* UIView+Extension.m */; };
+		4CE9CDEE1D4B5ED800132928 /* KeepCancelHighlightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9CDED1D4B5ED800132928 /* KeepCancelHighlightButton.m */; };
+		4CE9CDF21D4B608B00132928 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9CDF11D4B608B00132928 /* Constant.m */; };
 		4CFC68081D25082E00BD60F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC68071D25082E00BD60F8 /* main.m */; };
 		4CFC680B1D25082E00BD60F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFC680A1D25082E00BD60F8 /* AppDelegate.m */; };
 		4CFC68161D25082E00BD60F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CFC68141D25082E00BD60F8 /* LaunchScreen.storyboard */; };
@@ -64,6 +68,14 @@
 		4CE9CDDE1D4B506E00132928 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4CE9CDE01D4B508E00132928 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		4CE9CDE11D4B508E00132928 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		4CE9CDE51D4B5E6200132928 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		4CE9CDE61D4B5E6200132928 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		4CE9CDE81D4B5E7800132928 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		4CE9CDE91D4B5E7800132928 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		4CE9CDEC1D4B5ED800132928 /* KeepCancelHighlightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeepCancelHighlightButton.h; sourceTree = "<group>"; };
+		4CE9CDED1D4B5ED800132928 /* KeepCancelHighlightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeepCancelHighlightButton.m; sourceTree = "<group>"; };
+		4CE9CDF01D4B608B00132928 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		4CE9CDF11D4B608B00132928 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		4CFC68031D25082E00BD60F8 /* KeepGuidePage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepGuidePage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFC68071D25082E00BD60F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CFC68091D25082E00BD60F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -305,6 +317,45 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4CE9CDE31D4B5E5700132928 /* Public(公共库) */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9CDEF1D4B607F00132928 /* Other */,
+				4CE9CDEB1D4B5EBC00132928 /* CustomView */,
+				4CE9CDE41D4B5E5700132928 /* Category */,
+			);
+			path = "Public(公共库)";
+			sourceTree = "<group>";
+		};
+		4CE9CDE41D4B5E5700132928 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9CDE51D4B5E6200132928 /* UIBarButtonItem+Extension.h */,
+				4CE9CDE61D4B5E6200132928 /* UIBarButtonItem+Extension.m */,
+				4CE9CDE81D4B5E7800132928 /* UIView+Extension.h */,
+				4CE9CDE91D4B5E7800132928 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		4CE9CDEB1D4B5EBC00132928 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9CDEC1D4B5ED800132928 /* KeepCancelHighlightButton.h */,
+				4CE9CDED1D4B5ED800132928 /* KeepCancelHighlightButton.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		4CE9CDEF1D4B607F00132928 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9CDF01D4B608B00132928 /* Constant.h */,
+				4CE9CDF11D4B608B00132928 /* Constant.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		4CFC67FA1D25082E00BD60F8 = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +379,7 @@
 		4CFC68051D25082E00BD60F8 /* KeepGuidePage */ = {
 			isa = PBXGroup;
 			children = (
+				4CE9CDE31D4B5E5700132928 /* Public(公共库) */,
 				4CE9CDD91D4B503C00132928 /* Account(账号) */,
 				4CCB2DE71D427353007BAE45 /* Train(训练) */,
 				4CCB2DE31D42734D007BAE45 /* Find(发现) */,
@@ -540,12 +592,16 @@
 				4CCB2DDA1D427188007BAE45 /* KeepNewFeatureViewController.m in Sources */,
 				4CCB2DF31D427715007BAE45 /* KeepFindViewController.m in Sources */,
 				4CFC680B1D25082E00BD60F8 /* AppDelegate.m in Sources */,
+				4CE9CDF21D4B608B00132928 /* Constant.m in Sources */,
 				4CFC684B1D25258200BD60F8 /* KeepAdScrollView.m in Sources */,
 				4CCB2DF91D427736007BAE45 /* KeepPersonalViewController.m in Sources */,
+				4CE9CDE71D4B5E6200132928 /* UIBarButtonItem+Extension.m in Sources */,
 				4CCB2DED1D427676007BAE45 /* KeepNavigationViewController.m in Sources */,
 				4CFC68081D25082E00BD60F8 /* main.m in Sources */,
 				4CE9CDE21D4B508E00132928 /* RegisterViewController.m in Sources */,
 				4CCB2DD71D42714E007BAE45 /* KeepTabBarViewController.m in Sources */,
+				4CE9CDEA1D4B5E7800132928 /* UIView+Extension.m in Sources */,
+				4CE9CDEE1D4B5ED800132928 /* KeepCancelHighlightButton.m in Sources */,
 				4CCB2DF61D427724007BAE45 /* KeepFollowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
