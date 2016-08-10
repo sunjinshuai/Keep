@@ -58,9 +58,7 @@
 {
     // 判断先前我们设置的唯一标识
     if([shortcutItem.type isEqualToString:@"com.51fanxing.adorableStar"]){
-        
-        
-        
+
     }else if ([shortcutItem.type isEqualToString:@"com.51fanxing.searchBrand"]){
         
         

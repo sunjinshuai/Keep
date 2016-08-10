@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "Constant.h"
 
 @interface LoginViewController ()
 
@@ -24,7 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = KeepNavigationThemeColor;
+    self.title = @"登录";
     // Do any additional setup after loading the view.
 }
 

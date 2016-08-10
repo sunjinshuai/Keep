@@ -7,6 +7,7 @@
 //
 
 #import "RegisterViewController.h"
+#import "Constant.h"
 
 @interface RegisterViewController ()
 
@@ -23,8 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = KeepNavigationThemeColor;
+    self.title = @"注册";
 }
 
 - (void)didReceiveMemoryWarning {
