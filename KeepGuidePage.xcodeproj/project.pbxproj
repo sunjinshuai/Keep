@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C670B4B1E5346B700281698 /* MYCollectionViewStreamLineFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C670B4A1E5346B700281698 /* MYCollectionViewStreamLineFlowLayout.m */; };
+		4C670B4E1E5347C200281698 /* MYGroupIssueLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C670B4D1E5347C200281698 /* MYGroupIssueLabelCell.m */; };
+		4C670B531E53483800281698 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C670B501E53483800281698 /* UIColor+Extension.m */; };
+		4C670B541E53483800281698 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C670B521E53483800281698 /* UILabel+Extension.m */; };
+		4C670B571E53498200281698 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C670B561E53498200281698 /* NSString+Extension.m */; };
 		4CCB2DD71D42714E007BAE45 /* KeepTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB2DD61D42714E007BAE45 /* KeepTabBarViewController.m */; };
 		4CCB2DDA1D427188007BAE45 /* KeepNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB2DD91D427188007BAE45 /* KeepNewFeatureViewController.m */; };
 		4CCB2DED1D427676007BAE45 /* KeepNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB2DEC1D427676007BAE45 /* KeepNavigationViewController.m */; };
@@ -50,6 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C670B491E5346B700281698 /* MYCollectionViewStreamLineFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYCollectionViewStreamLineFlowLayout.h; sourceTree = "<group>"; };
+		4C670B4A1E5346B700281698 /* MYCollectionViewStreamLineFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYCollectionViewStreamLineFlowLayout.m; sourceTree = "<group>"; };
+		4C670B4C1E5347C200281698 /* MYGroupIssueLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MYGroupIssueLabelCell.h; path = "KeepGuidePage/Public(公共库)/MYCollectionViewStreamLineFlowLayout/MYGroupIssueLabelCell.h"; sourceTree = SOURCE_ROOT; };
+		4C670B4D1E5347C200281698 /* MYGroupIssueLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MYGroupIssueLabelCell.m; path = "KeepGuidePage/Public(公共库)/MYCollectionViewStreamLineFlowLayout/MYGroupIssueLabelCell.m"; sourceTree = SOURCE_ROOT; };
+		4C670B4F1E53483800281698 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		4C670B501E53483800281698 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		4C670B511E53483800281698 /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		4C670B521E53483800281698 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		4C670B551E53498200281698 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		4C670B561E53498200281698 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		4CCB2DD51D42714E007BAE45 /* KeepTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeepTabBarViewController.h; sourceTree = "<group>"; };
 		4CCB2DD61D42714E007BAE45 /* KeepTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeepTabBarViewController.m; sourceTree = "<group>"; };
 		4CCB2DD81D427188007BAE45 /* KeepNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeepNewFeatureViewController.h; path = "KeepGuidePage/Main(主要)/Controller/KeepNewFeatureViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -123,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C670B481E5346A600281698 /* MYCollectionViewStreamLineFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				4C670B491E5346B700281698 /* MYCollectionViewStreamLineFlowLayout.h */,
+				4C670B4A1E5346B700281698 /* MYCollectionViewStreamLineFlowLayout.m */,
+			);
+			path = MYCollectionViewStreamLineFlowLayout;
+			sourceTree = "<group>";
+		};
 		4CCB2DD21D42711C007BAE45 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +269,8 @@
 		4CCB2DE61D42734D007BAE45 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4C670B4C1E5347C200281698 /* MYGroupIssueLabelCell.h */,
+				4C670B4D1E5347C200281698 /* MYGroupIssueLabelCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,6 +346,7 @@
 		4CE9CDE31D4B5E5700132928 /* Public(公共库) */ = {
 			isa = PBXGroup;
 			children = (
+				4C670B481E5346A600281698 /* MYCollectionViewStreamLineFlowLayout */,
 				4CE9CDEF1D4B607F00132928 /* Other */,
 				4CE9CDEB1D4B5EBC00132928 /* CustomView */,
 				4CE9CDE41D4B5E5700132928 /* Category */,
@@ -334,6 +361,12 @@
 				4CE9CDE61D4B5E6200132928 /* UIBarButtonItem+Extension.m */,
 				4CE9CDE81D4B5E7800132928 /* UIView+Extension.h */,
 				4CE9CDE91D4B5E7800132928 /* UIView+Extension.m */,
+				4C670B4F1E53483800281698 /* UIColor+Extension.h */,
+				4C670B501E53483800281698 /* UIColor+Extension.m */,
+				4C670B511E53483800281698 /* UILabel+Extension.h */,
+				4C670B521E53483800281698 /* UILabel+Extension.m */,
+				4C670B551E53498200281698 /* NSString+Extension.h */,
+				4C670B561E53498200281698 /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -591,10 +624,14 @@
 				4CFC684E1D252B0C00BD60F8 /* KeepAdLabel.m in Sources */,
 				4CCB2DDA1D427188007BAE45 /* KeepNewFeatureViewController.m in Sources */,
 				4CCB2DF31D427715007BAE45 /* KeepFindViewController.m in Sources */,
+				4C670B4E1E5347C200281698 /* MYGroupIssueLabelCell.m in Sources */,
 				4CFC680B1D25082E00BD60F8 /* AppDelegate.m in Sources */,
 				4CE9CDF21D4B608B00132928 /* Constant.m in Sources */,
 				4CFC684B1D25258200BD60F8 /* KeepAdScrollView.m in Sources */,
+				4C670B541E53483800281698 /* UILabel+Extension.m in Sources */,
+				4C670B531E53483800281698 /* UIColor+Extension.m in Sources */,
 				4CCB2DF91D427736007BAE45 /* KeepPersonalViewController.m in Sources */,
+				4C670B571E53498200281698 /* NSString+Extension.m in Sources */,
 				4CE9CDE71D4B5E6200132928 /* UIBarButtonItem+Extension.m in Sources */,
 				4CCB2DED1D427676007BAE45 /* KeepNavigationViewController.m in Sources */,
 				4CFC68081D25082E00BD60F8 /* main.m in Sources */,
@@ -603,6 +640,7 @@
 				4CE9CDEA1D4B5E7800132928 /* UIView+Extension.m in Sources */,
 				4CE9CDEE1D4B5ED800132928 /* KeepCancelHighlightButton.m in Sources */,
 				4CCB2DF61D427724007BAE45 /* KeepFollowViewController.m in Sources */,
+				4C670B4B1E5346B700281698 /* MYCollectionViewStreamLineFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
