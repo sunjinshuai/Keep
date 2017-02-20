@@ -68,18 +68,13 @@
 - (MPMoviePlayerController *)moviePlayerController
 {
     if (!_moviePlayerController) {
-        
         _moviePlayerController = [[MPMoviePlayerController alloc] init];
-        
-        [_moviePlayerController setShouldAutoplay:YES];
-        
         _moviePlayerController.movieSourceType = MPMovieSourceTypeFile;
-        [_moviePlayerController setFullscreen:YES];
-        
-        [_moviePlayerController setRepeatMode:MPMovieRepeatModeOne];
         _moviePlayerController.controlStyle = MPMovieControlStyleNone;
         _moviePlayerController.view.frame = [UIScreen mainScreen].bounds;
-        
+        [_moviePlayerController setFullscreen:YES];
+        [_moviePlayerController setShouldAutoplay:YES];
+        [_moviePlayerController setRepeatMode:MPMovieRepeatModeOne];
         [self.view addSubview:self.moviePlayerController.view];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackStateChanged) name:MPMoviePlayerLoadStateDidChangeNotification object:nil];
         
