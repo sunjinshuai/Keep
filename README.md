@@ -56,11 +56,11 @@
 | @property(nonatomic) NSTimeInterval currentPlaybackTime  | 当前播放时间，单位：秒  |
 | @property(nonatomic) float currentPlaybackRate   |	当前播放速度，如果暂停则为0，正常速度为1.0，非0数据表示倍率 |
 
-| **对象方法**                                     | **说明**                             |
-| ----------------------------------------------  | ------------------------------------------- |
+| **对象方法**                                      | **说明**                             |
+| ------------------------------------------------| ------------------------------------------- |
 | - (instancetype)initWithContentURL:(NSURL *)url | 使用指定的URL初始化媒体播放控制器对象 |
 | - (void)setFullscreen:(BOOL)fullscreen animated:(BOOL)animated  | 设置视频全屏，注意如果要通过此方法设置全屏则必须在其视图显示之后设置，否则无效|
-|  (void)requestThumbnailImagesAtTimes:(NSArray *)playbackTimes timeOption:(MPMovieTimeOption)option | 获取在指定播放时间的视频缩略图，第一个参数是获取缩略图的时间点数组；第二个参数代表时间点精度，枚举类型：MPMovieTimeOptionNearestKeyFrame：时间点附近MPMovieTimeOptionExact：准确时间               |
+| - (void)requestThumbnailImagesAtTimes:(NSArray *)playbackTimes timeOption:(MPMovieTimeOption)option | 获取在指定播放时间的视频缩略图，第一个参数是获取缩略图的时间点数组；第二个参数代表时间点精度，枚举类型：MPMovieTimeOptionNearestKeyFrame：时间点附近MPMovieTimeOptionExact：准确时间               |
 | - (void)cancelAllThumbnailImageRequests     | 取消所有缩略图获取请求                      |
 | - (void)prepareToPlay  | 准备播放，加载视频数据到缓存，当调用play方法时如果没有准备好会自动调用此方法   |
 | - (void)play    | 开始播放           |
