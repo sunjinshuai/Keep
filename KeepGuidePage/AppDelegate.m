@@ -25,13 +25,13 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = [[KeepTabBarViewController alloc] init];
-    //if ([[NSBundle mainBundle].infoDictionary[@"CFBundleVersion"] isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:@"CFBundleVersion"]]) {
-    //} else {
-    //    KeepNewFeatureViewController *feature = [[KeepNewFeatureViewController alloc] init];
-    //    KeepNavigationViewController *navigation = [[KeepNavigationViewController alloc] initWithRootViewController:feature];
-    //    self.window.rootViewController = navigation;
-    //}
+//    self.window.rootViewController = [[KeepTabBarViewController alloc] init];
+    if ([[NSBundle mainBundle].infoDictionary[@"CFBundleVersion"] isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:@"CFBundleVersion"]]) {
+    } else {
+        KeepNewFeatureViewController *feature = [[KeepNewFeatureViewController alloc] init];
+        KeepNavigationViewController *navigation = [[KeepNavigationViewController alloc] initWithRootViewController:feature];
+        self.window.rootViewController = navigation;
+    }
     [self setup3DTouch];
     return YES;
 }
