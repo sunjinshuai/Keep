@@ -1,4 +1,3 @@
 language: objective-c
-osx_image: xcode8.3
 xcode_project: KeepGuidePage.xcodeproj
 xcode_scheme: KeepGuidePage #你需要集成测试的scheme
