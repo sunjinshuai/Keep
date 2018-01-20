@@ -1,0 +1,17 @@
+language: objective-c
+osx_image: xcode8.3
+branches:
+  only:
+    - master
+before_install:
+  - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
+script:
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+
+  - pod lib lint --allow-warnings --quick
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+  - sleep 3
+
