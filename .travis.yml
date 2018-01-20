@@ -1,11 +1,11 @@
-osx_image: xcode8.3
+osx_image: xcode9
 language: objective-c
 
 env:
   global:
     - LANG=en_US.UTF-8
     - LC_ALL=en_US.UTF-8
-    - XCODE_WORKSPACE=Keep/KeepGuidePage.xcodeproj
+    - XCODE_PROJECT=Keep/KeepGuidePage.xcodeproj
   matrix:
     - SCHEME="KeepGuidePage"
 
