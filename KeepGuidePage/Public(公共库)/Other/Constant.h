@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-  
+
 // 屏幕尺寸
 #define KeepScreenBounds [UIScreen mainScreen].bounds
 #define KeepScreenSize [UIScreen mainScreen].bounds.size
